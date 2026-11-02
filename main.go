@@ -14,6 +14,7 @@ func main() {
 	num, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Println("Invalid number.")
+		os.Exit(1)
 	}
 	text := fmt.Sprintf("Colour code: %03d", num)
 	fmt.Print(format(text, num))
